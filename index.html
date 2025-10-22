@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+<ModulePrefs title="Google.com" />
+<Content type="html"><![CDATA[
+
+
+<!DOCTYPE html>
+<html lang="und" style="width:100%;height:100%;background-color:black;">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Eaglercraft 1.12 test directory HTML page">
+    <meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.12, 1.12.2">
+    <title>Eaglercraft 1.12.2</title>
+    <meta property="og:locale" content="en-US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Eaglercraft 1.12.2">
+    <meta property="og:description" content="test directory HTML page">
+    <script type="e1e4da51d37f3d91f831f414-text/javascript" src="https://cdn.jsdelivr.net/gh/okyesgoogl/mc@main/classes.js"></script>
+    <script type="e1e4da51d37f3d91f831f414-text/javascript">
+      "use strict";
+      window.addEventListener("load", function() {
+        if(window.location.href.indexOf("file:") === 0) {
+          alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+        }else {
+          var relayId = Math.floor(Math.random() * 3);
+          window.eaglercraftXOpts = {
+            demoMode: false,
+            container: "game_frame",
+            assetsURI: "https://cdn.jsdelivr.net/gh/okyesgoogl/mc@main/assets.epk",
+            localesURI: "lang/",
+            worldsDB: "worlds",
+            servers: [
+                      { addr: "wss://play.zelz.net", name: "ZelzNet" },
+                { addr: "wss://mc.arch.lol", name: "ArchMC" },
+                { addr: "wss://beta.arch.lol", name: "§r §r §r §r §4§lArchMC Beta" },
+                { addr: "wss://mc.lamplifesteal.xyz", name: "LampLifesteal" },
+                      { addr: "wss://mc.ricenetwork.xyz", name: "Rice Network X BallCraft" },
+                { addr: "wss://clever-teaching.com", name: "Clever Teaching" },
+                { addr: "wss://mc.asspixel.net", name: "Asspixel Network" },
+                { addr: "wss://vanillamc.tech", name: "VanillaMC" },
+                                  { addr: "wss://aeon-network.net", name: "Aeon Network" }
+                ]
+          };
+          main();
+        }
+      });
+    </script>
+  </head>
+  <body style="margin:0px;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame">
+  <script src="https://cdn.jsdelivr.net/gh/okyesgoogl/mc@main/rocket-loader.min.js" data-cf-settings="e1e4da51d37f3d91f831f414-|49" defer></script>
+  
+  
+  <!-- ---------- ALT ORTADA SABİT REKLAM (738x95) - MERKEZDEN KESME YAKLAŞIMI ---------- -->
+<style>
+  /* Container: alt ortada, sabit, taşan içerik kırpılır */
+  #ad-container {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(738px, calc(100% - 20px)); /* 738px ama mobilde kenarlara 10px boşluk */
+    height: 95px;
+    background: rgba(0,0,0,0.90);
+    display: none;
+    z-index: 99999;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden; /* İÇERİĞİN TAŞAN KISMI KIRPILSIN */
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.45);
+    box-sizing: border-box;
+  }
+
+  #ad-iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); /* iframe'in orta kısmı container'ın ortasında olur */
+    /* iframe geniş tutuluyor ki center-crop elde edilsin */
+    width: 1200px; /* yeterince geniş koy; istersen 1000-1400 aralığında ayarla */
+    height: 100%;
+    border: 0;
+    display: block;
+    overflow: hidden;
+    pointer-events: auto;
+    box-sizing: content-box;
+    -ms-overflow-style: none;  /* IE/Edge scrollbar gizle */
+    scrollbar-width: none;     /* Firefox scrollbar gizle */
+  }
+  /* Webkit scrollbar gizleme */
+  #ad-iframe::-webkit-scrollbar { display: none; width: 0; height: 0; }
+
+  /* Kapat butonu */
+  #close-ad {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    background: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 5px 9px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: not-allowed;
+    opacity: 0.72;
+    z-index: 100000;
+  }
+  #close-ad.enabled {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  /* Opsiyonel: sağ kenarda görünen küçük scrollbarları örtmek istersen (ince maske) */
+  #ad-right-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px; /* gerekirse 12-18px arası dene */
+    height: 100%;
+    pointer-events: none; /* mask etkileşimleri engellesin */
+    background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.9));
+    z-index: 99999;
+  }
+
+  /* Mobilde fazla genişlik oluşmasın diye küçük ayar */
+  @media (max-width: 440px) {
+    #ad-container { width: calc(100% - 12px); left: 50%; transform: translateX(-50%); border-radius: 6px 6px 0 0; }
+    #ad-iframe { width: 1000px; } /* küçült */
+  }
+</style>
+
+<div id="ad-container" aria-hidden="true" role="dialog" aria-label="Reklam">
+
+  <iframe id="ad-iframe"
+    src="https://script.google.com/macros/s/AKfycbyLqfuYNg4HqY0inO1-UyYb5pVvsb0FDxHj6mw418ypqPmoNzUgt0McBC9Q9JfLfFp39Q/exec"
+    width="1200"
+    height="95"
+    scrolling="no"
+    frameborder="0"
+    sandbox="allow-scripts allow-popups allow-same-origin">
+  </iframe>
+
+
+
+  <!-- opsiyonel sağ maske: eğer hala küçük bir scrollbar kenarda gözüküyorsa bu örtü gizler -->
+  <div id="ad-right-mask"></div>
+</div>
+
+<script>
+  // 2 saniye sonra reklam göster, sonra 5s geri sayımla X etkinleşecek.
+  (function(){
+    const showDelay = 2000; // ms
+    const countdownStart = 5; // saniye
+    const adContainer = document.getElementById('ad-container');
+    const closeBtn = document.getElementById('close-ad');
+
+    setTimeout(() => {
+      // Göster
+      adContainer.style.display = 'block';
+      adContainer.setAttribute('aria-hidden','false');
+
+      // Geri sayım başlat
+      let timeLeft = countdownStart;
+      closeBtn.textContent = `Kapat (${timeLeft})`;
+      const t = setInterval(() => {
+        timeLeft--;
+        if (timeLeft > 0) {
+          closeBtn.textContent = `Kapat (${timeLeft})`;
+        } else {
+          clearInterval(t);
+          closeBtn.disabled = false;
+          closeBtn.classList.add('enabled');
+          closeBtn.textContent = 'Kapat (X)';
+        }
+      }, 1000);
+
+      // Kapatma
+      closeBtn.addEventListener('click', () => {
+        if (closeBtn.disabled) return;
+        adContainer.remove();
+      });
+
+      // Fareyle sürüklenip taşınma vb. istenmiyorsa eklemeyin.
+    }, showDelay);
+  })();
+</script>
+
+
+  </body>
+</html>
+
+
+
+
+
+]]></Content>
+</Module>
