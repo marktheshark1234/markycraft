@@ -1,131 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" style="width:100%;height:100%;background:#000;">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <meta name="description" content="Sarasota County" />
-  <meta name="keywords" content="eaglercraft, minecraft, 1.12.2, browser, markycraft" />
-  <title>MarkyCraft 1.12.2</title>
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Sarasota County" />
-  <meta property="og:description" content="Browser launcher for MarkyCraft 1.12.2" />
-  <meta name="theme-color" content="#000000" />
-  <link rel="icon" href="https://markycraft.vercel.app/favicon.ico" />
-  <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #000;
-      font-family: Arial, sans-serif;
-    }
-
-    #game_frame {
-      width: 100%;
-      height: 100%;
-      background: #000;
-    }
-
-    #boot_message {
-      position: fixed;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #000;
-      color: #fff;
-      z-index: 9999;
-      text-align: center;
-      padding: 24px;
-      box-sizing: border-box;
-    }
-
-    #boot_message.hidden {
-      display: none;
-    }
-
-    .boot-card {
-      max-width: 560px;
-      width: 100%;
-    }
-
-    .boot-title {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .boot-subtitle {
-      font-size: 15px;
-      line-height: 1.5;
-      opacity: 0.9;
-    }
-
-    .boot-error {
-      color: #ff8f8f;
-      margin-top: 14px;
-      white-space: pre-wrap;
-    }
-  </style>
-  <script src="https://cdn.jsdelivr.net/gh/catfoolyou/EagsWebTest@main/classes.js"></script>
-  <script>
-    "use strict";
-
-    window.addEventListener("error", function (ev) {
-      var box = document.getElementById("boot_message");
-      var err = document.getElementById("boot_error");
-      if (box && err) {
-        err.textContent = "Launcher error: " + (ev.message || "Unknown error");
-      }
-    });
-
-    window.addEventListener("load", function () {
-      if (window.location.protocol === "file:") {
-        var err = document.getElementById("boot_error");
-        if (err) {
-          err.textContent = "Use HTTP/HTTPS only. Upload this file to Vercel or another web host.";
-        }
-        return;
-      }
-
-      window.eaglercraftXOpts = {
-        demoMode: false,
-        container: "game_frame",
-        assetsURI: "https://cdn.jsdelivr.net/gh/catfoolyou/EagsWebTest@main/assets.epk",
-        localesURI: "https://cdn.jsdelivr.net/gh/catfoolyou/EagsWebTest@main/lang/",
-        worldsDB: "worlds",
-        servers: [
-          { addr: "wss://beta.arch.lol", name: "Spam Click PVP" },
-          { addr: "wss://trpvp.club", name: "Kinda Laggy Modern PVP" }
-          { addr: "wss://fablepvp.xyz", name: "Kinda Laggy Modern PVP 2" }
-        ]
-      };
-
-      try {
-        if (typeof main !== "function") {
-          throw new Error("classes.js loaded, but main() was not found");
-        }
-        document.getElementById("boot_message").classList.add("hidden");
-        main();
-      } catch (e) {
-        var err = document.getElementById("boot_error");
-        if (err) {
-          err.textContent = "Startup failed: " + (e && e.message ? e.message : String(e));
-        }
-      }
-    });
-  </script>
-</head>
-<body>
-  <div id="game_frame"></div>
-
-  <div id="boot_message">
-    <div class="boot-card">
-      <div class="boot-title">MarkyCraft 1.12.2</div>
-      <div class="boot-subtitle">Loading remote game files...</div>
-      <div id="boot_error" class="boot-error"></div>
-    </div>
-  </div>
-</body>
+<html lang="und" style="width:100%;height:100%;background-color:black;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+		<meta name="description" content="Eaglercraft 1.12 test directory HTML page">
+		<meta name="keywords" content="eaglercraft, eaglercraftx, minecraft, 1.12, 1.12.2">
+		<title>Eaglercraft 1.12.2</title>
+		<meta property="og:locale" content="en-US">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Eaglercraft 1.12.2">
+		<meta property="og:description" content="test directory HTML page">
+		<link type="image/png" rel="shortcut icon" href="favicon.png">
+		<script type="text/javascript" src="classes.js"></script>
+		<script type="text/javascript">
+			"use strict";
+			window.addEventListener("load", function() {
+				if(window.location.href.indexOf("file:") === 0) {
+					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+				}else {
+					var relayId = Math.floor(Math.random() * 3);
+					window.eaglercraftXOpts = {
+						demoMode: false,
+						container: "game_frame",
+						assetsURI: "assets.epk",
+						localesURI: "lang/",
+						worldsDB: "worlds",
+						servers: [
+							{ addr: "wss://play.zelz.net", name: "ZelzNet" },
+							{ addr: "wss://mc.arch.lol", name: "ArchMC" },
+							{ addr: "wss://beta.arch.lol", name: "§r §r §r §r §4§lArchMC Beta" }
+    						]
+					};
+					main();
+				}
+			});
+		</script>
+	</head>
+	<body style="margin:0px;width:100%;height:100%;overflow:hidden;background-color:black;" id="game_frame">
+	</body>
 </html>
